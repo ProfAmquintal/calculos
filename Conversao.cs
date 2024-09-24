@@ -39,5 +39,31 @@ namespace Calculos
             else
                 return -1;
         }
+       
+        public enum ConversaoDistancia
+        {
+            Nulo=0,
+            MetrosMilhas,
+            MilhasMetros
+        }
+        /// <summary>
+        /// Converte distâncias
+        /// </summary>
+        /// <param name="conversao">Tipo de conversao</param>
+        /// <param name="distancia">Distancia a converter</param>
+        /// <returns>Retorna o resultado da conversão da distancia</returns>
+
+        public static double converterDistancias(ConversaoDistancia conversao,double distancia)
+        {
+            if (conversao == ConversaoDistancia.MetrosMilhas)
+                return (distancia * 0.0006213712);
+            else
+                if (conversao == ConversaoDistancia.MilhasMetros)
+                return (distancia * 1609.344);
+            else
+                return -1;
+        }
+
+       
     }
 }
