@@ -12,6 +12,16 @@ namespace Calculos
     internal class aritmetica
     {
         /// <summary>
+        /// Tipo de conversão de temperatura a executar
+        /// </summary>
+        public enum ConversaoTemperatura
+        {
+            Nulo=0,
+            CelsiusFahrenheit,
+            FahrenheitCelsius
+
+        }
+        /// <summary>
         /// Operação Soma
         /// </summary>
         /// <returns> Retorna a soma de 2 números </returns>
